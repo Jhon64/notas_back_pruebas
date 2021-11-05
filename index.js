@@ -9,7 +9,7 @@ App.use(morgan('dev'))
 App.use(bodyParser.urlencoded({extended:true}))
 App.use(bodyParser.json())
 App.use(indexRouter)
-App.set('PORT',process.env.port||5000)
+App.set('PORT',process.env.PORT||5000)
 App.listen(App.get('PORT'),()=>{
     console.log('http://localhost:'+App.get('PORT'))
 })
