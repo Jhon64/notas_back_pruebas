@@ -52,6 +52,7 @@ router.get('/crear-orden', async function (req, res) {
             "url_redir_on_rejected": "http://192.168.0.3:5500/",
             "url_redir_on_success": "http://192.168.0.3:5500/apurata/order-success",
             "url_redir_on_order_detail": "http://192.168.0.3:5500/profile",
+            "webhook": "http://c0b0-2800-200-f008-ca0e-d0dc-1843-6b69-becd.ngrok.io/api/webhook",
             "customer_data": {
                 "address": "Dir. 123",
                 "dni": "14159265",
@@ -65,7 +66,7 @@ router.get('/crear-orden', async function (req, res) {
     res.send(result.data);
 });
 
-router.get('/order-success',function(req,res){
+router.get('/order-success', function (req, res) {
     console.log(req)
     res.send('success')
 

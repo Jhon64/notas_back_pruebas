@@ -13,7 +13,9 @@ router.delete('/:_id', notasController.delete)
 router.put('/:_id', notasController.update)
 router.post('/apurata/login', apurataController.login)
 router.post('/webhook', function (req, res) {
-    console.log(req.body)
+    const body = req.body
+    console.log(body)
+
     res.send(req.body)
 })
 
